@@ -1,0 +1,104 @@
+#js_overlay_wrapper.overlay-wrapper > .overlay {
+    position: fixed !important;
+}
+
+.edit-add-exist-image, .edit-add-remove-image {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.edit-add-exist-image > p, .edit-add-remove-image > span {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.edit-add-exist-image img {
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.edit-add-action-wrapper {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.index-datatable-image-wrapper {
+    width: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.index-datatable-image-wrapper img {
+    width: 100%;
+}
+
+.custom-file-label {
+    overflow: hidden;
+}
+
+.edit-add-append-view-wrapper {
+    padding: 10px 0 20px 30px;
+}
+
+.edit-add-append-view-wrapper label {
+    font-weight: 500 !important;
+}
+
+.edit-add-append-view-wrapper .edit-add-append-view-input {
+    margin-bottom: 5px;
+}
+
+.edit-add-append-view-wrapper .edit-add-append-view-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 5px;
+}
+
+.edit-add-append-view-wrapper .edit-add-append-view-item:hover {
+    border: 1px solid #666;
+}
+
+.edit-add-append-view-wrapper .edit-add-append-view-item .edit-add-append-view-item-remove {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #dc3545;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.edit-add-append-view-wrapper .edit-add-append-view-item:hover .edit-add-append-view-item-remove {
+    opacity: 1;
+}
+
+.edit-add-append-view-wrapper .edit-add-append-view-action {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.edit-add-accordion .card-title {
+    float: none;
+}
+
+.edit-add-accordion .card-title a {
+    display: block;
+}

@@ -1,0 +1,52 @@
+#Modpagespeed Off
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+
+    </IfModule>
+
+    RewriteEngine On
+
+    RewriteCond %{HTTP_HOST} ^sealifegroup.com [NC]
+    RewriteRule ^(.*)$ https://www.sealifegroup.com/$1 [L,R=301]
+
+    RewriteCond %{HTTPS} !=on [NC]
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+#Options +FollowSymLink
+  RewriteEngine on
+  Redirect 301 /meet-our-team /about-us
+  Redirect 301 /sealife-foundation /sustainable-project
+  Redirect 301 /sealife-safe-and-security /privacy-policy
+  Redirect 301 /our-cruises /
+  Redirect 301 /our_cruises/sealife-legend-cruises /cruises/sea-glamour-cruise
+  Redirect 301 /our_cruises/sealife-cruises /cruises/sealife-cruise
+  Redirect 301 /itinerary /
+  Redirect 301 /page-itinerary/?cruise=sealife-legend-cruises /
+  Redirect 301 /page-itinerary/?cruise=sealife-legend-cruises&type=2-days-1-night /packages/2-day-in-lan-ha-bay-on-luxury-cruise
+  Redirect 301 /page-itinerary/?cruise=sealife-legend-cruises&type=3-days-2-nights /packages/3-day-in-lan-ha-bay-on-luxury-cuise
+  Redirect 301 /page-itinerary/?cruise=sealife-cruises /
+  Redirect 301 /page-itinerary/?cruise=sealife-cruises&type=2-days-1-night /packages/2-day-in-ha-long-bay-on-cruise
+  Redirect 301 /page-itinerary/?cruise=sealife-cruises&type=3-days-2-nights /packages/3-day-ha-long-bay-on-cruise
+  Redirect 301 /galleries /gallery
+  Redirect 301 /confirm-customer /contact
+  Redirect 301 /charter-cruise /mice-charter
+  Redirect 301 /halong-experience /
+  Redirect 301 /travel-guide /blog
+  Redirect 301 /download-center /
+  Redirect 301 /blogs-news /blog
+</IfModule>
